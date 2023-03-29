@@ -2,6 +2,7 @@ package com.nextbasecrm.step_definitions;
 
 import com.nextbasecrm.pages.LoginPage;
 import com.nextbasecrm.pages.SearchValue;
+import com.nextbasecrm.utilities.BrowserUtils;
 import com.nextbasecrm.utilities.ConfigurationReader;
 import com.nextbasecrm.utilities.Driver;
 import io.cucumber.java.en.And;
@@ -22,6 +23,7 @@ public class ConversationPage_StepDefinitions {
         loginPage.inputPassword.sendKeys(ConfigurationReader.getProperty("loginPassword"));
         loginPage.loginButton.click();
 
+
     }
 
     @When("User on the homepage should write {string}  to the search box")
@@ -31,6 +33,7 @@ public class ConversationPage_StepDefinitions {
 
     @When("User clicks to search button")
     public void user_clicks_to_search_button() {
+
         searchValues.searchButton.click();
     }
 
@@ -49,5 +52,9 @@ public class ConversationPage_StepDefinitions {
     @Then("User should see Conversations on the opened page")
     public void userShouldSeeConversationsOnTheOpenedPage() {
         System.out.println(searchValues.conversationsTitle.isDisplayed());
+        Driver.closeDriver();
     }
+
+
+
 }
