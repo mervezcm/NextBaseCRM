@@ -6,7 +6,7 @@ Feature:As a user, I should be able to find people, documents and more
 
     Given "<user>" navigates website and enters valid credentials,should see homepage
     When  User on the homepage can write "<relatedKeyword>" to the search box
-    And   User clicks to search button
+    When  User clicks to search button
     Then   User should see the related keyword written on the search box
 
     Examples:

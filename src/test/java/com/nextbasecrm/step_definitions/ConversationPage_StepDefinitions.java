@@ -40,6 +40,7 @@ public class ConversationPage_StepDefinitions {
 
     @And("User should see the conversations keyword")
     public void userShouldSeeTheConversationsKeyword() {
+        BrowserUtils.sleep(2);
         System.out.println(searchValues.conversationsKeyword.isDisplayed());
     }
 
