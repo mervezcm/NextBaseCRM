@@ -1,17 +1,14 @@
 package com.nextbasecrm.step_definitions;
 
-import com.nextbasecrm.pages.LoginPage;
 import com.nextbasecrm.pages.RelatedKeywordPage;
-import com.nextbasecrm.pages.SearchValue;
+import com.nextbasecrm.pages.SearchValuePage;
 import com.nextbasecrm.utilities.BrowserUtils;
-import com.nextbasecrm.utilities.ConfigurationReader;
 import com.nextbasecrm.utilities.Driver;
-import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
-public class RelatedKeywords_StepDefinition {
-    SearchValue searchValues = new SearchValue();
+public class RelatedKeywords_StepDefinitions {
+    SearchValuePage searchValues = new SearchValuePage();
     RelatedKeywordPage relatedKeyword =new RelatedKeywordPage();
 
     @When("User on the homepage can write {string} to the search box")
@@ -30,6 +27,7 @@ public class RelatedKeywords_StepDefinition {
         BrowserUtils.sleep(2);
         Driver.closeDriver();
     }
+
 
 
 }

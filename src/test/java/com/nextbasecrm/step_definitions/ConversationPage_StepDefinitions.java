@@ -1,7 +1,7 @@
 package com.nextbasecrm.step_definitions;
 
 import com.nextbasecrm.pages.LoginPage;
-import com.nextbasecrm.pages.SearchValue;
+import com.nextbasecrm.pages.SearchValuePage;
 import com.nextbasecrm.utilities.BrowserUtils;
 import com.nextbasecrm.utilities.ConfigurationReader;
 import com.nextbasecrm.utilities.Driver;
@@ -9,17 +9,16 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import org.junit.Assert;
 
 public class ConversationPage_StepDefinitions {
 
     LoginPage loginPage = new LoginPage();
-    SearchValue searchValues = new SearchValue();
+    SearchValuePage searchValues = new SearchValuePage();
 
     @Given("{string} navigates website and enters valid credentials,should see homepage")
     public void navigates_website_and_enters_valid_credentials_should_see_homepage(String user) {
         Driver.getDriver().get(ConfigurationReader.getProperty("website"));
-       loginPage.inputLoginEmail.sendKeys(user);
+        loginPage.inputLoginEmail.sendKeys(user);
         loginPage.inputPassword.sendKeys(ConfigurationReader.getProperty("loginPassword"));
         loginPage.loginButton.click();
 
@@ -52,10 +51,14 @@ public class ConversationPage_StepDefinitions {
 
     @Then("User should see Conversations on the opened page")
     public void userShouldSeeConversationsOnTheOpenedPage() {
+      // BrowserUtils.waitForVisibility(searchValues.conversationsTitle, 10);
+        //BrowserUtils.sleep(2);
         System.out.println(searchValues.conversationsTitle.isDisplayed());
-        Driver.closeDriver();
-    }
+       // BrowserUtils.waitForVisibility(searchValues.conversationsTitle, 10);
+        //BrowserUtils.sleep(2);
 
+       Driver.closeDriver();
+    }
 
 
 }
