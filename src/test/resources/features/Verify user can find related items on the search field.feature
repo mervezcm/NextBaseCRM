@@ -1,7 +1,7 @@
 Feature:As a user, I should be able to find people, documents and more
   by using top-page search bar; so that I can access the searched data
 
-
+  @AGL-408
   Scenario Outline:Related keywords verification(User can find related items to written keyword)
 
     Given "<user>" navigates website and enters valid credentials,should see homepage

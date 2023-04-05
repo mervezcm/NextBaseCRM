@@ -30,14 +30,15 @@ public class FindingGroup_StepDefinitions {
     public void userClicksOnTheFindingGroupButton() {
         BrowserUtils.sleep(2);
         groupKeyword.findingGroupKey.click();
-        BrowserUtils.sleep(2);
-        Driver.closeDriver();
+
     }
 
     @Then("User should click search button under the search in groups title opened page")
     public void userShouldClickSearchButtonUnderTheSearchInGroupsTitleOnOpenedPage() {
         BrowserUtils.sleep(2);
         groupKeyword.searchGroup.click();
+        BrowserUtils.sleep(2);
+
 
     }
 }

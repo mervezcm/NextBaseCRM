@@ -51,13 +51,10 @@ public class ConversationPage_StepDefinitions {
 
     @Then("User should see Conversations on the opened page")
     public void userShouldSeeConversationsOnTheOpenedPage() {
-      // BrowserUtils.waitForVisibility(searchValues.conversationsTitle, 10);
-        //BrowserUtils.sleep(2);
-        System.out.println(searchValues.conversationsTitle.isDisplayed());
-       // BrowserUtils.waitForVisibility(searchValues.conversationsTitle, 10);
-        //BrowserUtils.sleep(2);
 
-       Driver.closeDriver();
+        System.out.println(searchValues.conversationsTitle.isDisplayed());
+
+
     }
 
 
