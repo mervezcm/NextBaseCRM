@@ -7,6 +7,7 @@ import com.nextbasecrm.utilities.Driver;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.junit.Assert;
 
 public class FindingGroup_StepDefinitions {
 
@@ -35,9 +36,11 @@ public class FindingGroup_StepDefinitions {
 
     @Then("User should click search button under the search in groups title opened page")
     public void userShouldClickSearchButtonUnderTheSearchInGroupsTitleOnOpenedPage() {
-        BrowserUtils.sleep(2);
+
         groupKeyword.searchGroup.click();
-        BrowserUtils.sleep(2);
+        Assert.assertEquals("Finding Group",groupKeyword.searchGroup.getText());
+
+
 
 
     }

@@ -15,7 +15,7 @@ public class FindingGroupPage {
     @FindBy(xpath = "(//a[@class='search-title-top-item-link'])[1]")
     public WebElement findingGroupKey;
 
-    @FindBy(xpath = "//img[@src='/upload/learning/2/res16/Fv6AU.group_filter.png']")
+    @FindBy(xpath = "//div[.='Finding Groups']")
     public WebElement searchGroup;
 
 
